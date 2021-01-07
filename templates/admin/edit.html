@@ -1,0 +1,28 @@
+{% extends 'admin/model/edit.html' %}
+{% block tail_js %}
+    <script src="{{ admin_static.url(filename='vendor/jquery.min.js', v='2.1.4') }}" type="text/javascript"></script>
+    <script src="{{ admin_static.url(filename='bootstrap/bootstrap3/js/bootstrap.min.js', v='3.3.5') }}" type="text/javascript"></script>
+    <script src="{{ admin_static.url(filename='vendor/moment.min.js', v='2.9.0') }}" type="text/javascript"></script>
+    <script src="http://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        var loc = 'http://localhost:5000/static/ckeditor/plugins/';
+
+        CKEDITOR.plugins.addExternal('button', loc+'/button/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('clipboard', loc+'/clipboard/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('dialog', loc+'dialog/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('dialogui', loc+'/dialogui/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('embed', loc+'/embed/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('embedbase', loc+'/embedbase/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('lineutils', loc+'/lineutils/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('notification', loc+'/notification/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('notificationaggregator', loc+'/notificationaggregator/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('toolbar', loc+'/toolbar/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('widget', loc+'/widget/', 'plugin.js');
+        CKEDITOR.plugins.addExternal('widgetselection', loc+'/widgetselection/', 'plugin.js');
+
+        CKEDITOR.replace('body', {
+            embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
+            extraPlugins: 'button,clipboard,dialog,dialogui,embed,embedbase,lineutils,notification,notificationaggregator,toolbar,widget,widgetselection'
+        });
+        </script>
+{% endblock %}

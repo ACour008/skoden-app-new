@@ -1,0 +1,413 @@
+$link-color: rgb(0, 211, 229);
+$footer-background: rgb(18, 18, 18);
+$hover-grey: #bbb;
+$header-color: rgb(0, 117, 127);
+$light-tag: rgb(0, 248, 255);
+$med-tag: rgb(0, 124, 127);
+$dark-tag: rgb(0, 62, 64);
+$page-width: 85%;
+
+/********************************/
+
+/* FONTS
+
+/********************************/
+
+@font-face {
+	font-family: "BebasNeue";
+	src: url("../fonts/BebasNeue.otf");
+}
+
+::-webkit-input-placeholder {
+    font-family: "Droid Serif";
+}
+:-moz-placeholder {
+    font-family: "Droid Serif";
+}
+::-moz-placeholder {
+    font-family: "Droid Serif";
+}
+:-ms-input-placeholder {
+    font-family: "Droid Serif";
+}
+
+
+/********************************/
+
+/* ALL PAGES
+
+/********************************/
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+	background: url("../img/bg.jpg") no-repeat center center fixed;
+	background-color:black;
+    -webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size: cover;
+	min-height:100%;
+	display:flex;
+	flex-direction:column;
+}
+
+.page { flex: 1; }
+
+a {
+	color: $link-color;
+	text-decoration: none;
+}
+
+a:hover             { text-decoration: underline; }
+h6, h5, h4, h3, h2, h1 { font-family: "BebasNeue";}
+
+.bold                 { font-weight: 800; }
+.small               { font-size: 0.75em ;}
+.center { text-align: center; float: none;}
+.left       { text-align: left; float:left}
+.right   { text-align: right; float:right;}
+
+
+/********************************/
+
+/* TOP NAV
+
+/********************************/
+
+header {
+	border-bottom: 3px solid $header-color;
+	transition: height 750ms ease-out, background 1s ease-in-out;
+	width:100%;
+	overflow:hidden;
+	z-index: 1;
+	position:relative;
+
+	div.nav-bar {
+		display:flex;
+		flex-direction:row;
+		margin-top: 5px;
+		
+		p {
+	  		font-family: "BebasNeue";
+			font-size: 2em;
+			color:white;
+			font-weight:600;
+		}
+
+		// "Skoden Chronicles"
+		p { 
+			margin:0px 0.625em;
+			flex: 1;
+			text-align: right
+		}  
+
+		// "mobile menu"
+		p#menu {
+			order: -1;
+			text-align: left;
+		}
+		
+		p:hover       { color:white; }
+		p#menu:hover  { 
+			opacity:0.5;
+			cursor:pointer;
+		}
+	}
+
+	#nav {
+		max-width: $page-width;
+		margin:0px auto;
+		overflow:hidden;
+
+		ul.nav-links {
+			padding:0px 10px;
+			margin: 10px -0.5rem 0px -.05rem;
+			display:flex;
+			flex-direction: row;
+
+			li {
+				list-style: none;
+				font-family: "BebasNeue";
+				margin-top: 150px - 39px;
+				margin-bottom: 0;
+				margin-left: 0;
+				margin-right:0;
+				color: white;
+				display:block;
+			    flex: 1 1 0%;
+
+				a, p { 
+					font-size:2em;
+					margin:0;
+					color:white;
+					text-decoration: none;
+				}
+
+				a:hover, p:hover {
+					color: $hover-grey;
+					text-decoration: none;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.no-display { display:none; }
+.closed      { height:45px; }
+
+.opened {
+	background: rgba(0, 0, 0, 0.75);
+	height:315px;
+}
+
+/********************************/
+
+/* MODAL BOX
+
+/********************************/
+
+#modal-box {
+	display:none;
+}
+
+
+/********************************/
+
+/* Leaderboard (Social Media & Page title)
+
+/********************************/
+
+.flex-container {
+	background: url('../img/hatch.png') repeat top center fixed;
+	height: auto;
+	max-height: 375px;
+	overflow:hidden;
+	width:100%;
+	margin:0px auto;
+	z-index: 0;
+
+    .flex-inner {
+    	display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-direction: row;
+	    flex-flow: wrap;
+	    align-content: flex-end;
+		width: $page-width;
+		margin:0px auto;
+
+		ul.social-media {
+			display:flex;
+			flex-direction:row;
+			list-style:none;
+			background:$dark-tag;
+			padding:10px;
+			border-radius: 10px;
+			margin:60px auto 0px auto;
+
+            li:last-child {
+            	padding-right:0px;
+            }
+
+			li {
+				padding:0px 7.5px 0px 0px;
+				a {
+					img { width:48px; }
+				}
+			}
+		}
+
+		h2#page-title {
+			color:white;
+			font-size:3.5em;
+			font-weight:600;
+			margin:0.5em 0 0.5em 0;
+			padding:0;
+			text-align:center;
+		}
+	}
+}
+
+
+/********************************/
+
+/* Main Content Page
+
+/********************************/
+
+.content-wrapper {	
+    width: 100%;
+    top: -200px;
+    padding: 0;
+    margin: 0;
+
+    .content-inner {
+    	width:   $page-width;
+    	margin:  0px auto;
+    	background: white;
+    	border-radius: 0.625em 0.625em 0em 0em;
+    	padding:1.25em;
+    	overflow:hidden;
+
+    	#featured-episode {
+    		width:100%;
+    		max-height: 300px;
+    		overflow:hidden;
+
+    		.feature-picture {
+    			height: 300px;
+    			width:726px;
+    			float:right;
+    		}
+    	}
+
+    	.sidebar, .player {
+    		width:25%;
+    		float:right;
+    	}
+
+    	.sidebar { float:left; }
+
+    	.content-main {
+    		width:75%;
+    		float:left;
+    		height:2500px; /* For Demo Purposes. Remove when content is filled */
+    	}
+   	}
+}
+
+
+/********************************/
+
+/* Sidebar
+
+/********************************/
+
+.sidebar-header {
+    padding: 0.625em;
+    background: rgb(0, 186, 191);
+    color: white;
+    font: 1.5em "BebasNeue";
+    border-radius: 5px;
+}
+
+.btn {
+	text-align:center;
+	display:block;
+	margin:0px auto;
+}
+
+/********************************/
+
+/* Footer
+
+/********************************/
+footer {
+	display: flex;
+	flex-direction: column;
+    margin: 0px auto 20px auto;
+    width: 85%;
+    padding: 20px 10px;
+    background: $footer-background;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    align-items: center; 
+
+    p {
+    	margin:0 0 1em 0;
+    	color: white;
+    	text-align: center;
+    }
+}
+
+
+/********************************/
+
+/* MEDIA QUERIES
+
+  Responsive Grid Media Queries
+  35.5em (568px) - Phone only (xs)
+  48em (768px) - Tablet portrait (sm)
+  56em (900px) - Tablet landscape
+  64em (1024px) - Sm Desktop (md)
+  80em (1280px) - Md Desktop (lg)
+  112.5em (1800px) - Big desktop
+
+/********************************/
+
+@media (max-width: 56em) {
+	#home-text { display: block;}
+	#home-logo { display: none;  }
+	header {
+		background:none;
+
+		#nav {
+			ul.nav-links {
+				flex-direction:column;
+
+				li {
+					margin-top:0;
+					text-align:center;
+				}
+				// Logo
+				li:nth-child(4) {
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+	.flex-container {
+		top:45px;
+
+		.flex-inner {
+			h2#page-title {
+				font-size:2.75em;
+			}
+		}
+	}
+	.content-wrapper {
+		.content-inner {
+
+			.content-main, .sidebar, .player {
+				width: 100%;
+				float:none;
+			}
+			.player {
+				border-bottom: 3px solid $header-color;
+			}
+		}
+	}
+}
+
+@media (min-width: 56em) {
+	#home-text { display: none;  }
+	#home-logo { display: block; margin:0px auto; }
+
+	header {
+		height: 150px !important;
+		overflow:visible;
+
+		div.nav-bar { display:none; }
+		#nav {
+			overflow:visible;
+
+			ul.nav-links {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3) { text-align:  left; }
+				li:nth-child(5), li:nth-child(6), li:nth-child(7) { text-align: right; }
+			    li:not(:nth-child(4)) { margin-top:105px; }
+			    // Logo
+				li:nth-child(4) {
+					margin-top: 35px;
+				}
+			}
+		}
+	}
+
+	.sidebar-header { width:100%; }
+}

@@ -1,0 +1,328 @@
+/********************************/
+/* FONTS
+
+/********************************/
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue.otf"); }
+::-webkit-input-placeholder {
+  font-family: "Droid Serif"; }
+
+:-moz-placeholder {
+  font-family: "Droid Serif"; }
+
+::-moz-placeholder {
+  font-family: "Droid Serif"; }
+
+:-ms-input-placeholder {
+  font-family: "Droid Serif"; }
+
+/********************************/
+/* ALL PAGES
+
+/********************************/
+* {
+  outline: none;
+  box-sizing: border-box; }
+
+body {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.page {
+  flex: 1; }
+
+a {
+  color: #00d3e5;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+h6, h5, h4, h3, h2, h1 {
+  font-family: "BebasNeue"; }
+
+.bold {
+  font-weight: 800; }
+
+.small {
+  font-size: 0.75em; }
+
+.center {
+  text-align: center;
+  float: none; }
+
+.left {
+  text-align: left;
+  float: left; }
+
+.right {
+  text-align: right;
+  float: right; }
+
+/********************************/
+/* TOP NAV
+
+/********************************/
+header {
+  border-bottom: 3px solid #00757f;
+  transition: height 750ms ease-out, background 1s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  position: relative; }
+  header div.nav-bar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px; }
+    header div.nav-bar p {
+      font-family: "BebasNeue";
+      font-size: 2em;
+      color: white;
+      font-weight: 600; }
+    header div.nav-bar p {
+      margin: 0px 0.625em;
+      flex: 1;
+      text-align: right; }
+    header div.nav-bar p#menu {
+      order: -1;
+      text-align: left; }
+    header div.nav-bar p:hover {
+      color: white; }
+    header div.nav-bar p#menu:hover {
+      opacity: 0.5;
+      cursor: pointer; }
+  header #nav {
+    max-width: 85%;
+    margin: 0px auto;
+    overflow: hidden; }
+    header #nav ul.nav-links {
+      padding: 0px 10px;
+      margin: 10px -0.5rem 0px -.05rem;
+      display: flex;
+      flex-direction: row; }
+      header #nav ul.nav-links li {
+        list-style: none;
+        font-family: "BebasNeue";
+        margin-top: 111px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        color: white;
+        display: block;
+        flex: 1 1 0%; }
+        header #nav ul.nav-links li a, header #nav ul.nav-links li p {
+          font-size: 2em;
+          margin: 0;
+          color: white;
+          text-decoration: none; }
+        header #nav ul.nav-links li a:hover, header #nav ul.nav-links li p:hover {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer; }
+
+.no-display {
+  display: none; }
+
+.closed {
+  height: 45px; }
+
+.opened {
+  background: rgba(0, 0, 0, 0.75);
+  height: 315px; }
+
+/********************************/
+/* MODAL BOX
+
+/********************************/
+#modal-box {
+  display: none; }
+
+/********************************/
+/* Leaderboard (Social Media & Page title)
+
+/********************************/
+.flex-container {
+  background: url("../img/hatch.png") repeat top center fixed;
+  height: auto;
+  max-height: 375px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px auto;
+  z-index: 0; }
+  .flex-container .flex-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-content: flex-end;
+    width: 85%;
+    margin: 0px auto; }
+    .flex-container .flex-inner ul.social-media {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      background: #003e40;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 60px auto 0px auto; }
+      .flex-container .flex-inner ul.social-media li:last-child {
+        padding-right: 0px; }
+      .flex-container .flex-inner ul.social-media li {
+        padding: 0px 7.5px 0px 0px; }
+        .flex-container .flex-inner ul.social-media li a img {
+          width: 48px; }
+    .flex-container .flex-inner h2#page-title {
+      color: white;
+      font-size: 3.5em;
+      font-weight: 600;
+      margin: 0.5em 0 0.5em 0;
+      padding: 0;
+      text-align: center; }
+
+/********************************/
+/* Main Content Page
+
+/********************************/
+.content-wrapper {
+  width: 100%;
+  top: -200px;
+  padding: 0;
+  margin: 0; }
+  .content-wrapper .content-inner {
+    width: 85%;
+    margin: 0px auto;
+    background: white;
+    border-radius: 0.625em 0.625em 0em 0em;
+    padding: 1.25em;
+    overflow: hidden; }
+    .content-wrapper .content-inner #featured-episode {
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden; }
+      .content-wrapper .content-inner #featured-episode .feature-picture {
+        height: 300px;
+        width: 726px;
+        float: right; }
+    .content-wrapper .content-inner .sidebar, .content-wrapper .content-inner .player {
+      width: 25%;
+      float: right; }
+    .content-wrapper .content-inner .sidebar {
+      float: left; }
+    .content-wrapper .content-inner .content-main {
+      width: 75%;
+      float: left;
+      height: 2500px;
+      /* For Demo Purposes. Remove when content is filled */ }
+
+/********************************/
+/* Sidebar
+
+/********************************/
+.sidebar-header {
+  padding: 0.625em;
+  background: #00babf;
+  color: white;
+  font: 1.5em "BebasNeue";
+  border-radius: 5px; }
+
+.btn {
+  text-align: center;
+  display: block;
+  margin: 0px auto; }
+
+/********************************/
+/* Footer
+
+/********************************/
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto 20px auto;
+  width: 85%;
+  padding: 20px 10px;
+  background: #121212;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center; }
+  footer p {
+    margin: 0 0 1em 0;
+    color: white;
+    text-align: center; }
+
+/********************************/
+/* MEDIA QUERIES
+
+  Responsive Grid Media Queries
+  35.5em (568px) - Phone only (xs)
+  48em (768px) - Tablet portrait (sm)
+  56em (900px) - Tablet landscape
+  64em (1024px) - Sm Desktop (md)
+  80em (1280px) - Md Desktop (lg)
+  112.5em (1800px) - Big desktop
+
+/********************************/
+@media (max-width: 56em) {
+  #home-text {
+    display: block; }
+
+  #home-logo {
+    display: none; }
+
+  header {
+    background: none; }
+    header #nav ul.nav-links {
+      flex-direction: column; }
+      header #nav ul.nav-links li {
+        margin-top: 0;
+        text-align: center; }
+      header #nav ul.nav-links li:nth-child(4) {
+        margin-top: 0px; }
+
+  .flex-container {
+    top: 45px; }
+    .flex-container .flex-inner h2#page-title {
+      font-size: 2.75em; }
+
+  .content-wrapper .content-inner .content-main, .content-wrapper .content-inner .sidebar, .content-wrapper .content-inner .player {
+    width: 100%;
+    float: none; }
+  .content-wrapper .content-inner .player {
+    border-bottom: 3px solid #00757f; } }
+@media (min-width: 56em) {
+  #home-text {
+    display: none; }
+
+  #home-logo {
+    display: block;
+    margin: 0px auto; }
+
+  header {
+    height: 150px !important;
+    overflow: visible; }
+    header div.nav-bar {
+      display: none; }
+    header #nav {
+      overflow: visible; }
+      header #nav ul.nav-links li:nth-child(1), header #nav ul.nav-links li:nth-child(2), header #nav ul.nav-links li:nth-child(3) {
+        text-align: left; }
+      header #nav ul.nav-links li:nth-child(5), header #nav ul.nav-links li:nth-child(6), header #nav ul.nav-links li:nth-child(7) {
+        text-align: right; }
+      header #nav ul.nav-links li:not(:nth-child(4)) {
+        margin-top: 105px; }
+      header #nav ul.nav-links li:nth-child(4) {
+        margin-top: 35px; }
+
+  .sidebar-header {
+    width: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */
