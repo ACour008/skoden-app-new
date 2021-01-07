@@ -6,17 +6,11 @@
 - Frameworks used: Flask (v. 0.12.2); AngularJS (v.1.3.2)
 - Dependencies:
   - Python (v. 3.6)
-    - Flask (v.0.12.2)
-    - FlaskMail (v.0.9.1)
-    - Flask-Admin
-    - Flask-Security
-    - soundcloud-python
+    - Flask (v.0.12.2), FlaskMail (v.0.9.1), Flask-Admin, Flask-Security, soundcloud-python
   - Angular
-    - CKEditor
-    - uiRouter
-    - ngMeta
+    - uiRouter, ngMeta
   - Other
-    - select2.js
+    - CKEditor, select2.js
 
 Notes:
 - Like the previous version, this is an old project as the podcast is no longer active.
